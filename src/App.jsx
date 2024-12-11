@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from './redux/contactsOps';
-import { selectFilteredContacts } from './redux/contactsSlice';
-import { selectNameFilter } from './redux/filtersSlice';
+import { fetchContacts } from './redux/contacts/operations';
+import { selectFilteredContacts } from './redux/contacts/slice';
+import { selectNameFilter } from './redux/filters/slice';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import SearchBox from './components/SearchBox/SearchBox';
