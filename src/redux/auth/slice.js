@@ -8,6 +8,7 @@ const initialState = {
   isRefreshing: false,
 };
 
+
 const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -42,4 +43,5 @@ const authSlice = createSlice({
   },
 });
 
-export const authReducer = authSlice.reducer;
+export default authSlice.reducer;
+
