@@ -23,7 +23,7 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (values, { resetForm }) => {
     await dispatch(register(values));
-    navigate('/contacts'); // Перенаправлення на сторінку контактів
+    navigate('/contacts'); 
     resetForm();
   };
 
@@ -34,7 +34,7 @@ const RegistrationForm = () => {
       onSubmit={handleSubmit}
     >
       <Form className="bg-gray-900 bg-opacity-80 text-white shadow-lg rounded-lg p-8 max-w-md w-full mx-auto">
-        {/* Заголовок */}
+        
         <h1 className="text-4xl font-bold text-orange-400 mb-8 text-center">Registration</h1>
 
         <div className="mb-6">

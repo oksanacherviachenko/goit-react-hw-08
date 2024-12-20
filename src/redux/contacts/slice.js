@@ -31,7 +31,7 @@ const contactsSlice = createSlice({
       .addCase(addContact.fulfilled, (state, action) => {
         state.loading = false;
         if (action.payload && action.payload.id) {
-          state.items.push(action.payload); // Додаємо новий контакт
+          state.items.push(action.payload); 
         }
       })
       .addCase(addContact.rejected, (state, action) => {
@@ -52,7 +52,7 @@ export const selectContacts = (state) => state.contacts.items;
 export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],
   (contacts, filter) => {
-    const normalizedFilter = filter?.toLowerCase() || ''; // Переконайтеся, що filter - це строка
+    const normalizedFilter = filter?.toLowerCase() || ''; 
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );

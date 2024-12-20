@@ -61,7 +61,7 @@ export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) 
 export const forgotPassword = createAsyncThunk('auth/forgotPassword', async (email, thunkAPI) => {
   try {
     const { data } = await axios.post('/users/forgot-password', { email });
-    return data.message; // Наприклад, "Password reset email sent"
+    return data.message; 
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
@@ -71,7 +71,7 @@ export const forgotPassword = createAsyncThunk('auth/forgotPassword', async (ema
 export const resetPassword = createAsyncThunk('auth/resetPassword', async ({ token, newPassword }, thunkAPI) => {
   try {
     const { data } = await axios.post(`/users/reset-password`, { token, password: newPassword });
-    return data.message; // Наприклад, "Password has been reset"
+    return data.message; 
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }

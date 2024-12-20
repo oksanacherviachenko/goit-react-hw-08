@@ -16,7 +16,7 @@ const validationSchema = Yup.object().shape({
 
 const NewPasswordPage = () => {
   const handleSubmit = async (values, { resetForm }) => {
-    // Логіка збереження нового паролю
+    
     console.log('New password submitted:', values.password);
     resetForm();
     alert('Your password has been updated.');

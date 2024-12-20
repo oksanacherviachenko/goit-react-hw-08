@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBook } from 'react-icons/fa'; // Імпортуємо іконку з бібліотеки react-icons
+import { FaBook } from 'react-icons/fa'; 
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import AuthNav from '../AuthNav/AuthNav';
@@ -16,7 +16,7 @@ const AppBar = () => {
         to="/"
         className="flex items-center text-2xl font-bold text-orange-400 hover:text-orange-500 hover:underline transition-all duration-300"
       >
-        <FaBook className="mr-2 text-orange-400" /> {/* Іконка зліва від назви */}
+        <FaBook className="mr-2 text-orange-400" /> {}
         Phonebook
       </Link>
       {/* Навігація */}

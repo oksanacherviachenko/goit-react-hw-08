@@ -8,7 +8,7 @@ const validationSchema = Yup.object().shape({
 
 const ResetPasswordPage = () => {
   const handleSubmit = async (values, { resetForm }) => {
-    // Логіка надсилання email з посиланням на скидання паролю
+    
     console.log('Reset password request sent for:', values.email);
     resetForm();
     alert('Password reset link sent to your email.');

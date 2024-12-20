@@ -9,7 +9,7 @@ const ContactList = () => {
   const dispatch = useDispatch();
   const [editingContactId, setEditingContactId] = useState(null);
   const [editedContact, setEditedContact] = useState({ name: '', number: '' });
-  const [contactPhotos, setContactPhotos] = useState({}); // Track photos by contact ID
+  const [contactPhotos, setContactPhotos] = useState({}); 
 
   const handleEditClick = (id, name, number) => {
     setEditingContactId(id);

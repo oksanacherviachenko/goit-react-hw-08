@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBook } from 'react-icons/fa'; // Імпортуємо іконку з бібліотеки react-icons
+import { FaBook } from 'react-icons/fa'; 
 
 const HomePage = () => (
   <div
@@ -10,11 +10,11 @@ const HomePage = () => (
       backgroundImage: "url('/src/assets/background.jpg')",
     }}
   >
-    {/* Основний контент */}
+    
     <div className="flex-grow flex items-center justify-center text-center text-orange-400 px-4">
       <div className="w-full max-w-4xl bg-gray-900 bg-opacity-80 shadow-lg rounded-lg p-10">
         <h1 className="text-6xl font-bold mb-8 flex items-center justify-center">
-          <FaBook className="mr-3 text-orange-400" /> {/* Іконка зліва від назви */}
+          <FaBook className="mr-3 text-orange-400" /> 
           Phonebook
         </h1>
         <p className="text-gray-300 text-2xl mb-8">
