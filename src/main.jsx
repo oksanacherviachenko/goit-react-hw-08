@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom'; // Додано BrowserRouter
-import { store } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 import App from './App';
+import { store, persistor } from './redux/store';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Provider store={store}>
-    <BrowserRouter> {/* Обгортання App у BrowserRouter */}
-      <App />
-    </BrowserRouter>
-  </Provider>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 );

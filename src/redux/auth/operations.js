@@ -3,12 +3,10 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.goit.global/';
 
-// Set token
 const setAuthHeader = (token) => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
-// Remove token
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
@@ -54,6 +52,26 @@ export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) 
     setAuthHeader(persistedToken);
     const { data } = await axios.get('/users/current');
     return data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message);
+  }
+});
+
+// Запит на відновлення пароля
+export const forgotPassword = createAsyncThunk('auth/forgotPassword', async (email, thunkAPI) => {
+  try {
+    const { data } = await axios.post('/users/forgot-password', { email });
+    return data.message; // Наприклад, "Password reset email sent"
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message);
+  }
+});
+
+// Запит на скидання пароля
+export const resetPassword = createAsyncThunk('auth/resetPassword', async ({ token, newPassword }, thunkAPI) => {
+  try {
+    const { data } = await axios.post(`/users/reset-password`, { token, password: newPassword });
+    return data.message; // Наприклад, "Password has been reset"
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }

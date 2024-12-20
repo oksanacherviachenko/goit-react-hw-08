@@ -2,10 +2,16 @@ import React from 'react';
 import LoginForm from './LoginForm';
 
 const LoginPage = () => (
-  <div>
-    <h1>Login</h1>
+  <div
+    className="w-screen h-screen flex items-center justify-center bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/src/assets/background.jpg')",
+    }}
+  >
     <LoginForm />
   </div>
 );
 
 export default LoginPage;
+
+
