@@ -17,7 +17,7 @@ const ContactsPage = () => {
       id="contacts-page"
       className="min-h-screen w-full flex items-center justify-center bg-cover bg-center"
       style={{
-        backgroundImage: "url('/src/assets/background.jpg')",
+        backgroundImage: "url('/background.jpg')",
       }}
     >
       <div className="w-full max-w-5xl bg-gray-900 bg-opacity-80 shadow-lg rounded-lg p-8">

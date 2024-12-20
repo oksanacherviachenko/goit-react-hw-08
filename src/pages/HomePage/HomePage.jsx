@@ -7,7 +7,7 @@ const HomePage = () => (
     id="home-page"
     className="w-screen h-screen flex flex-col bg-cover bg-center overflow-hidden"
     style={{
-      backgroundImage: "url('/src/assets/background.jpg')",
+      backgroundImage: "url('/background.jpg')",
     }}
   >
     

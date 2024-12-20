@@ -5,7 +5,7 @@ const LoginPage = () => (
   <div
     className="w-screen h-screen flex items-center justify-center bg-cover bg-center"
     style={{
-      backgroundImage: "url('/src/assets/background.jpg')",
+      backgroundImage: "url('/background.jpg')",
     }}
   >
     <LoginForm />
