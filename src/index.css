@@ -2,16 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Додаткові стилі */
+/* Загальні стилі */
 html,
 body {
-  @apply m-0 p-0 w-full h-full box-border; /* Усуває всі відступи та маргіни */
+  @apply m-0 p-0 w-full h-full box-border;
 }
 
 body {
-  @apply bg-gray-50 text-gray-900;
+  @apply flex flex-col;
 }
 
 #root {
-  @apply min-h-screen flex flex-col; /* Забезпечує коректний розмір та вирівнювання сторінки */
+  @apply h-full flex flex-col;
+}
+
+main {
+  @apply flex-grow flex justify-center items-center overflow-hidden;
+}
+
+footer {
+  @apply mt-auto;
 }

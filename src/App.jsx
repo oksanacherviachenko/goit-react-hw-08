@@ -15,7 +15,6 @@ const RegistrationPage = lazy(() => import('./pages/RegistrationPage/Registratio
 const ResetPasswordPage = lazy(() => import('./pages/ResetPasswordPage/ResetPasswordPage'));
 const NewPasswordPage = lazy(() => import('./pages/NewPasswordPage/NewPasswordPage'));
 
-
 const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
@@ -54,6 +53,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
